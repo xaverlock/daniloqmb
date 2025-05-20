@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkBio Expert - Meus Links</title>
+
+  <!-- 
+    LINKBIO EXPERT - Desenvolvido por Danilo Mota
+    Direitos autorais © 2025 - Todos os direitos reservados
+
+    🛠 ÁREA DE PERSONALIZAÇÃO (altere abaixo):
+  -->
+  <script>
+    const NOME_TITULO = "Danilo Mota";
+    const FRASE_DESTAQUE = "Esses são meus links 🌐🔗";
+
+    const LOGO_IMAGEM = "images/logotipo-linkbio.png";
+
+    const BANNER1_IMAGEM = "images/billion-reacts-curso-online-tenten.png";
+    const BANNER1_LINK = "https://seulink.com.br";
+
+    const BANNER2_IMAGEM = "images/banner-youtube-tenten.png";
+    const BANNER2_LINK = "https://seulink.com.br";
+
+    const BANNER3_IMAGEM = "images/mentoria-tenten.png";
+    const BANNER3_LINK = "https://seulink.com.br";
+
+    const GTM_ID = "GTM-W72BQVHP";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("nome").innerText = NOME_TITULO;
+      document.getElementById("descricao").innerText = FRASE_DESTAQUE;
+      document.getElementById("logo-img").src = LOGO_IMAGEM;
+
+      document.getElementById("banner1").href = BANNER1_LINK;
+      document.getElementById("banner1").style.backgroundImage = `url('${BANNER1_IMAGEM}')`;
+
+      document.getElementById("banner2").href = BANNER2_LINK;
+      document.getElementById("banner2").style.backgroundImage = `url('${BANNER2_IMAGEM}')`;
+
+      document.getElementById("banner3").href = BANNER3_LINK;
+      document.getElementById("banner3").style.backgroundImage = `url('${BANNER3_IMAGEM}')`;
+
+      const gtmScript = document.createElement("script");
+      gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+      gtmScript.async = true;
+      document.head.appendChild(gtmScript);
+
+      const gtmNoscript = document.getElementById("gtm-noscript");
+      gtmNoscript.src = `https://www.googletagmanager.com/ns.html?id=${GTM_ID}`;
+    });
+  </script>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Acesso a todos meus links oficiais, redes sociais, cursos, contato, biblioteca e mais.">
+  <meta property="og:title" content="Nome da Página - Meus Links">
+  <meta property="og:description" content="Acesso a todos meus links oficiais, redes sociais, cursos, contato, biblioteca e mais.">
+  <meta property="og:url" content="https://meusite.com.br">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nome da Página - Meus Links">
+  <meta name="twitter:description" content="Acesso a todos meus links oficiais, redes sociais, cursos, contato, biblioteca e mais.">
+  <link rel="icon" type="image/png" href="images/favicon-tenten.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('images/fundo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: #A4A4A4;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .title {
+      font-size: 32px;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .paragraph {
+      color: white;
+      margin-top: 0px;
+    }
+
+    .banner {
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: rgba(2, 2, 2, 0.21) 5px 6px 8px 3px;
+      transition: transform 0.3s ease-in-out;
+      display: block;
+    }
+
+    .banner:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 24px;
+      }
+
+      .banner {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img id="logo-img" src="images/logotipo-linkbio.png" alt="Logo">
+    </div>
+    <h1 class="title" id="nome">[NOME]</h1>
+    <p class="paragraph" id="descricao">[DESCRIÇÃO]</p>
+
+    <a id="banner1" class="banner" href="#" style="background-image: url('');"></a>
+    <a id="banner2" class="banner" href="#" style="background-image: url('');"></a>
+    <a id="banner3" class="banner" href="#" style="background-image: url('');"></a>
+  </div>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe id="gtm-noscript" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+</body>
+</html>
